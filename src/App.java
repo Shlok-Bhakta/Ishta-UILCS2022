@@ -9,31 +9,31 @@ public class App {
     loop:for(int zz = 0;zz<loop ;zz++)
 		{
 			char[] chars = scanner.next().toCharArray();
-			int ans = 0;
-			int ct = 0;
+			int output= 0;
+			int cursorPos = 0;
 			for(char ch: chars)
 			{
 				if(ch == ')')
 				{
-					ct--;
-					if(ct < 0)
+					cursorPos--;
+					if(cursorPos < 0)
 					{
 						System.out.println(0);
 						continue loop;
-					}else if(ct == 0)
+					}else if(cursorPos == 0)
 					{
-						ans++;
+						output++;
 					}
 				}else {
-					ct++;
+					cursorPos++;
 				}
 			}
-			if(ct != 0)
+			if(cursorPos != 0)
 			{
 				System.out.println(0);
 				continue loop;
 			}
-			System.out.println((1 << ans - 1) - 1);
+			System.out.println((1 << output- 1) - 1);
 		}
     }
 
