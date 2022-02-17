@@ -14,34 +14,13 @@ public class App {
             String line = scanner.next();
 
 
-            System.out.println(combos(line.toCharArray()));
-
-
-        }
-
-
-
-    }
-
-    public static int combos(char[] paren){
-        
-        
-        while(position < paren.length){
-            if (paren[position] == '(') {
-                position++;
-                if(paren[position] == ')'){
-                    comb++;
-                    position++;
-                    return comb;
-                }else{
-                    position++;
-                    combos(paren);
-                }
-                
-            }
             
+
+
         }
 
-        return comb;
+
+
     }
+
     }
